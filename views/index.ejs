@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+  <link href="//cdn.bootcss.com/foundation/6.2.4/foundation.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="row">
+      <p class="text-center"> ejs </p>
+    </div>
+    
+    <div class="row">
+      <ul class="no-bullet">
+        <% for(var j = 0 ; j < uses.length; j++ ) { %>
+            <li>
+              <span> <%= uses[j].leader_name %> </span>
+              <span> <%= uses[j].leader_email %> </span>
+            </li>
+        <% } %>
+      </ul>
+    </div>
+
+  <div class="row">
+    <h1 class="text-center"> 表单 </h1>
+  </div>
+
+  <form action="/login" method="POST">
+      <div class="row">
+        <div class="medium-6 columns">
+          <label> name
+            <input type="text" placeholder="name" name="leader_name">
+          </label>
+        </div>
+        <div class="medium-6 columns">
+          <label> email
+            <input type="text" placeholder="email" name="leader_email">
+          </label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="medium-6 columns">
+          <label> hex color 
+            <input type="text" placeholder="hexcolor" name="hexcolor">
+          </label>
+        </div>
+        <div class="medium-6 columns">
+          <label> by2
+            <input type="text" placeholder="by2" name="by2">
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="medium-4 columns text-center">
+          <button type="submit" class="expanded button">Save</button>
+        </div>
+
+        <div class="medium-4 columns text-center">
+          <button class="expanded button" id="update">upDate</button>
+        </div>
+
+         <div class="medium-4 columns text-center">
+          <button class="expanded button" id="delete">Delete </button>
+        </div>
+      </div>
+
+    </form>
+    
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
